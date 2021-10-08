@@ -11,6 +11,8 @@ import java.io.IOException;
 @WebServlet(name = "requestHeaderServlet", urlPatterns = "/request-header")
 public class RequestHeaderServlet extends HttpServlet {
 
+    // HttpServletRequest
+    // HTTP 요청 메시지를 편리하게 사용할 수 있도록 개발자 대신 HTTP 요청 메시지를 파싱하여 그 결과를 HttpServletRequest 객체에 담아서 제공한다.
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -21,6 +23,8 @@ public class RequestHeaderServlet extends HttpServlet {
     }
 
     private void printStartLine(HttpServletRequest request) {
+        // HTTP 요청 메시지 start line
+        // http 메소드, url, 쿼리 스트링, 스키마, 프로토콜
         System.out.println("--- REQUEST-LINE - start ---");
         System.out.println("request.getMethod() = " + request.getMethod()); //GET
         System.out.println("request.getProtocal() = " + request.getProtocol()); // HTTP/1.1
@@ -37,6 +41,7 @@ public class RequestHeaderServlet extends HttpServlet {
     }
 
     private void printHeaders(HttpServletRequest request) {
+        // HTTP 요청 메시지 헤더
         System.out.println("--- Headers - start ---");
 
         request.getHeaderNames().asIterator().forEachRemaining(headerName ->
