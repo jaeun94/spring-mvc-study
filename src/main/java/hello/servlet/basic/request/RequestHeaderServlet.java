@@ -19,6 +19,7 @@ public class RequestHeaderServlet extends HttpServlet {
         printStartLine(request);
         printHeaders(request);
         printHeaderUtils(request);
+        printEtc(request);
 
     }
 
