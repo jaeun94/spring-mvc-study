@@ -1,4 +1,4 @@
-# Spring MVC(1)
+# Spring MVC Study - Intro
 
 MVC 프레임워크 만들기
 
